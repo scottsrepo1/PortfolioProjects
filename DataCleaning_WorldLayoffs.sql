@@ -101,7 +101,6 @@ FROM layoffs_staging2;
 
 -- changing date column from text data type to DATE data type in format (`date`, '%m/%d/%Y')
 -- Update table_name to change date column to correct format
--- NEVER ALTER TABLE on raw data - ONLY STAGING TABLE
 -- modifying date column data type from string text to DATE data type
 
 SELECT `date`
@@ -129,10 +128,8 @@ FROM layoffs_staging2
 WHERE company = 'Airbnb';
 
 -- Filling in the industry type for same name company with BLANKS listed in industry column
--- Ex. Company Airbnb has 1 row with industry listed as Travel and 1 row without.  Filling in Blank industry field with same industry type
 -- Create Join 
 -- Update table
--- If query doesn't work, try setting BLANKS to NULL first and then rerunning query with IS NULL and without '' Blanks
 
 SELECT DISTINCT *
 FROM layoffs_staging2
