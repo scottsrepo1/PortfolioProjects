@@ -34,7 +34,7 @@ FROM layoffs_staging2
 GROUP BY industry
 ORDER BY 2 DESC;
 
--- TRUNCATE (number, length) - Returns the the number truncated to the precision specified by length. /i.e length = 0, decimal places are omitted
+-- TRUNCATE (number, length)
 SELECT `date`, TRUNCATE(SUM(total_laid_off /2), 0)
 FROM layoffs_staging2
 GROUP BY `date`
