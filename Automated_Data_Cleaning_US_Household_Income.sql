@@ -4,7 +4,7 @@
 -- Within stored procedure created a duplicate table of 'us_household_income' 
 -- Then inserted into new table 'us_household_income_Cleaned' some data modifications
 -- Checked to see if stored procedure worked as expected
--- Created an event that runs the stored procedure on a timer 
+-- Created an event that runs the stored procedure on
 
 SELECT *
 FROM us_project.us_household_income;
